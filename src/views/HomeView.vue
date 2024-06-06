@@ -47,7 +47,7 @@
       <p class="text text-info text-center">提供合屬律師明亮乾淨的辦公室</p>
         <div class="row">
           <div class="col-lg-4 col-12 text-center mb-4 mb-lg-0">
-            <img src="/img/出租辦公室A.jpg"
+            <img src="https://github.com/Afonguwu/wisdom-win-vite/blob/gh-pages/img/出租辦公室A.jpg?raw=true"
             class="img-fluid rounded" style="max-height:350px;"
             alt="出租辦公室">
           </div>

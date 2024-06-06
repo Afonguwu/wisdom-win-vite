@@ -1,7 +1,7 @@
 <template>
     <div class="container-xxl">
         <bannerTitle style="background-image:linear-gradient(rgba(0, 0, 0, 0.3),
-        rgba(0, 0, 0, 0.3)),url('/img/joint-banner.jpg');">合署資訊</bannerTitle>
+        rgba(0, 0, 0, 0.3)),url('https://github.com/Afonguwu/wisdom-win-vite/blob/gh-pages/img/joint-banner.jpg?raw=true');">合署資訊</bannerTitle>
         <div class="content-div-p">
             <p class="fs-5 mb-6">若有其他想了解的資訊，歡迎來電詢問！</p>
             <h3 class="fs-2 fw-bold mb-4">地理位置</h3>
@@ -34,13 +34,13 @@
             <p class="fs-5 lh-lg">獨立辦公室每月合署費用15000元，可2位律師合租</p>
             <h3 class="fs-2 fw-bold mb-4">環境照片</h3>
             <div class="row">
-                <img class="col-6 p-1" src="/img/門口.jpg" alt="門口環境照">
-                <img class="col-6 p-1" src="/img/沙發區.jpg" alt="沙發區環境照">
-                <img class="col-4 p-1" src="/img/會議室.jpg" alt="會議室環境照">
-                <img class="col-4 p-1" src="/img/櫃台.jpg" alt="櫃台環境照">
-                <img class="col-4 p-1" src="/img/出租環境.jpg" alt="出租環境照">
-                <img class="col-5 p-1" src="/img/出租辦公室A.jpg" alt="出租辦公室">
-                <img class="col-7 p-1" src="/img/大辦公桌.jpg" alt="大辦公桌">
+                <img class="col-6 p-1" src="https://github.com/Afonguwu/wisdom-win-vite/blob/gh-pages/img/%E9%96%80%E5%8F%A3.jpg?raw=true" alt="門口環境照">
+                <img class="col-6 p-1" src="https://github.com/Afonguwu/wisdom-win-vite/blob/gh-pages/img/%E6%B2%99%E7%99%BC%E5%8D%80.jpg?raw=true" alt="沙發區環境照">
+                <img class="col-4 p-1" src="https://github.com/Afonguwu/wisdom-win-vite/blob/gh-pages/img/%E6%9C%83%E8%AD%B0%E5%AE%A4.jpg?raw=true" alt="會議室環境照">
+                <img class="col-4 p-1" src="https://github.com/Afonguwu/wisdom-win-vite/blob/gh-pages/img/%E6%AB%83%E5%8F%B0.jpg?raw=true" alt="櫃台環境照">
+                <img class="col-4 p-1" src="https://github.com/Afonguwu/wisdom-win-vite/blob/gh-pages/img/%E5%87%BA%E7%A7%9F%E7%92%B0%E5%A2%83.jpg?raw=true" alt="出租環境照">
+                <img class="col-5 p-1" src="https://github.com/Afonguwu/wisdom-win-vite/blob/gh-pages/img/%E5%87%BA%E7%A7%9F%E8%BE%A6%E5%85%AC%E5%AE%A4A.jpg?raw=true" alt="出租辦公室">
+                <img class="col-7 p-1" src="https://github.com/Afonguwu/wisdom-win-vite/blob/gh-pages/img/%E5%A4%A7%E8%BE%A6%E5%85%AC%E6%A1%8C.jpg?raw=true" alt="大辦公桌">
             </div>
         </div>
     </div>
