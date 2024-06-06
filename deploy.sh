@@ -17,7 +17,7 @@ git add -A
 git commit -m 'deploy'
 
 # if you are deploying to https://<USERNAME>.github.io/<REPO>
-git push -f git@github.com:Afonguwu/wisdom-win.git master:gh-pages
+git push -f git@github.com:Afonguwu/wisdom-win-vite.git main:gh-pages
 
 cd ..
 

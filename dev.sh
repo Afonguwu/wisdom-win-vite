@@ -4,4 +4,4 @@
 git init
 git add -A
 git commit -m ''
-git push git@github.com:Afonguwu/wisdom-win.vite.git master:main
+git push git@github.com:Afonguwu/wisdom-win.vite.git main:main
