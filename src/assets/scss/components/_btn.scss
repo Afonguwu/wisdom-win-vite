@@ -1,0 +1,55 @@
+.btn-action{
+    font-weight: bold;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    padding: 8px 16px;
+    min-width: 200px;
+    max-width: 250px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.2s linear 0s;
+    &:before{
+        content:"keyboard_double_arrow_right";
+        font-family:"Material Symbols Outlined";
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        right: 0;
+        top: 0;
+        opacity: 0;
+        height: 100%;
+        width: 40px;
+        transition: all 0.2s linear 0;
+    }
+    &:hover{
+        text-indent: -1.5rem;
+        &:before{
+        opacity: 1;
+        text-indent: -1.5rem;
+        }
+    }
+    }
+.btn-dark{
+    color:$secondary;
+    background: $primary;
+    border: 1px solid $secondary;
+    border-radius:12px;
+    &:hover{
+        background: $warning;
+        color:$secondary;
+        border: 1px solid $secondary;
+    }
+}
+.btn-light{
+    color:$secondary;
+    background: $info;
+    border: 1px solid $info;
+    border-radius:12px;
+    &:hover{
+        background: $warning;
+        color:$secondary;
+        border: 1px solid $warning;
+    }
+}

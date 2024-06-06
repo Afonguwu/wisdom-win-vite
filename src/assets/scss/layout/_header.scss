@@ -1,0 +1,32 @@
+.navbar-brand {
+  background-image: url('@/assets/img/logo.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  max-width: 320px;
+  height: auto;
+  text-indent: 101%;
+}
+header .nav-link {
+  background-color: transparent;
+  transition: background-color 0.3s ease;
+  border-radius: 15px;
+  position: relative;
+  overflow: hidden;
+}
+
+header .nav-link::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200%;
+  height: 200%;
+}
+
+.nav-link:hover::before {
+  background-color: rgba(255, 255, 255, 0.2);
+  transition: transform 0.3s ease;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}

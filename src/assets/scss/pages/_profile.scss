@@ -1,0 +1,18 @@
+.list-hover:hover{
+    background: $secondary;
+}
+.arrow-down{
+    position: relative;
+    &:after{
+        content:"keyboard_arrow_down";
+        font-family:"Material Symbols Outlined";
+        position: absolute;
+    }
+}
+.arrow-up{
+    &:after{
+        content:"keyboard_arrow_up";
+        font-family:"Material Symbols Outlined";
+        position: absolute;
+    }
+}

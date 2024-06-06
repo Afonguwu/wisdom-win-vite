@@ -1,0 +1,17 @@
+// venders
+@import '@/assets/scss/venders/bootstrap';
+@import '@/assets/scss/venders/googleicons';
+
+//base
+@import '@/assets/scss/base/base';
+@import '@/assets/scss/base/fonts';
+//components
+@import '@/assets/scss/components/btn';
+//layout
+@import '@/assets/scss/layout/header';
+// utils
+@import '@/assets/scss/utils/helpers';
+// pages
+@import '@/assets/scss/pages/home';
+@import '@/assets/scss/pages/profile';
+

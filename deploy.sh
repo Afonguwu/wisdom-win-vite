@@ -1,9 +1,10 @@
+#deploy to main
 npm run build
 git init
 git add .
 git commit -m ' upgrate'
 git push git@github.com:Afonguwu/wisdom-win-vite.git main:main
-
+#deploy to gh-pages
 cd dist
 git init
 git add -A

@@ -1,0 +1,19 @@
+.banner-img {
+  background: url('@/assets/img/櫃台.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 350px;
+  @include media-breakpoint-up(md) {
+    height: auto;
+    min-height: 450px;
+  }
+  @include media-breakpoint-up(lg) {
+    height: auto;
+    min-height: 650px;
+  }
+}
+.banner-color {
+  background: linear-gradient(to top, rgb($success, 0.9) 0%, rgba($success, 0.1) 100%);
+  // bg-dark bg-gradient bg-opacity-50
+}
