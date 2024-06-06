@@ -1,7 +1,7 @@
 <template>
     <div class="container-xxl">
         <bannerTitle style="background-image:linear-gradient(rgba(0, 0, 0, 0.3),
-        rgba(0, 0, 0, 0.3)),url('@/assets/img/joint-banner.jpg');">合署資訊</bannerTitle>
+        rgba(0, 0, 0, 0.3)),url('src/assets/img/joint-banner.jpg');">合署資訊</bannerTitle>
         <div class="content-div-p">
             <p class="fs-5 mb-6">若有其他想了解的資訊，歡迎來電詢問！</p>
             <h3 class="fs-2 fw-bold mb-4">地理位置</h3>
