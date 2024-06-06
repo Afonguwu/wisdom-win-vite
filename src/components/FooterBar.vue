@@ -4,7 +4,7 @@
       <div class="row justify-content-center border-bottom mb-3">
         <div class="col-10 col-md-8 col-lg-4 mb-4
         d-flex justify-content-center align-items-center justify-content-lg-end">
-          <img src="@/assets/img/logo.png" class="mw-100 d-block" alt="logo"> </div>
+          <img src="/src/assets/img/logo.png" class="mw-100 d-block" alt="logo"> </div>
         <div class="col-10 col-md-8 col-lg-4 text-light
         d-flex justify-content-center align-items-center justify-content-lg-start">
           <div>
