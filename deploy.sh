@@ -4,10 +4,7 @@ git add .
 git commit -m ' upgrate'
 git push git@github.com:Afonguwu/wisdom-win-vite.git main:main
 
-git checkout -b gh-pages
-cd dist
-git add .
+git add dist
 git commit -m 'deploy'
-git push -f git@github.com:Afonguwu/wisdom-win-vite.git gh-pages:gh-pages
+git push  -f git@github.com:Afonguwu/wisdom-win-vite.git main:gh-pages
 cd ..
-git checkout main
