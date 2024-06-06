@@ -68,7 +68,7 @@
                 提供辦公設備及耗材
               </li>
             </ul>
-            <router-link class="btn-action btn-light fs-6 ms-auto" to="/joint">了more</router-link>
+            <router-link class="btn-action btn-light fs-6 ms-auto" to="/joint">more</router-link>
           </div>
         </div>
       </div>
