@@ -34,13 +34,13 @@
             <p class="fs-5 lh-lg">獨立辦公室每月合署費用15000元，可2位律師合租</p>
             <h3 class="fs-2 fw-bold mb-4">環境照片</h3>
             <div class="row">
-                <img class="col-6 p-1" src="@/assets/img/門口.jpg" alt="門口環境照">
-                <img class="col-6 p-1" src="@/assets/img/沙發區.jpg" alt="沙發區環境照">
-                <img class="col-4 p-1" src="@/assets/img/會議室.jpg" alt="會議室環境照">
-                <img class="col-4 p-1" src="@/assets/img/櫃台.jpg" alt="櫃台環境照">
-                <img class="col-4 p-1" src="@/assets/img/出租環境.jpg" alt="出租環境照">
-                <img class="col-5 p-1" src="@/assets/img/出租辦公室A.jpg" alt="出租辦公室">
-                <img class="col-7 p-1" src="@/assets/img/大辦公桌.jpg" alt="大辦公桌">
+                <img class="col-6 p-1" src="/img/門口.jpg" alt="門口環境照">
+                <img class="col-6 p-1" src="/img/沙發區.jpg" alt="沙發區環境照">
+                <img class="col-4 p-1" src="/img/會議室.jpg" alt="會議室環境照">
+                <img class="col-4 p-1" src="/img/櫃台.jpg" alt="櫃台環境照">
+                <img class="col-4 p-1" src="/img/出租環境.jpg" alt="出租環境照">
+                <img class="col-5 p-1" src="/img/出租辦公室A.jpg" alt="出租辦公室">
+                <img class="col-7 p-1" src="/img/大辦公桌.jpg" alt="大辦公桌">
             </div>
         </div>
     </div>
