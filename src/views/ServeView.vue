@@ -1,7 +1,7 @@
 <template>
 <div class="container-xxl ">
     <bannerTitle style="background-image:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3))
-    ,url('src/assets/img/serve-banner.jpg');">服務項目</bannerTitle>
+    ,url('@/assets/img/serve-banner.jpg');">服務項目</bannerTitle>
     <div class="content-div-p">
         <p class="text mb-6 fw-bold">我們的服務領域包括但不限於以下：
         </p>
