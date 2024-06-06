@@ -6,5 +6,5 @@ git push git@github.com:Afonguwu/wisdom-win-vite.git main:main
 
 git add dist/.
 git commit -m 'deploy'
-git push  git@github.com:Afonguwu/wisdom-win-vite.git main:gh-pages
+git push  -f git@github.com:Afonguwu/wisdom-win-vite.git main:gh-pages
 cd ..
