@@ -37,7 +37,7 @@
                 <img class="col-6 p-1" src="https://github.com/Afonguwu/wisdom-win-vite/blob/gh-pages/img/%E9%96%80%E5%8F%A3.jpg?raw=true" alt="門口環境照">
                 <img class="col-6 p-1" src="https://github.com/Afonguwu/wisdom-win-vite/blob/gh-pages/img/%E6%B2%99%E7%99%BC%E5%8D%80.jpg?raw=true" alt="沙發區環境照">
                 <img class="col-4 p-1" src="https://github.com/Afonguwu/wisdom-win-vite/blob/gh-pages/img/%E6%9C%83%E8%AD%B0%E5%AE%A4.jpg?raw=true" alt="會議室環境照">
-                <img class="col-4 p-1" src="https://github.com/Afonguwu/wisdom-win-vite/blob/gh-pages/img/%E6%AB%83%E5%8F%B0.jpg?raw=true" alt="櫃台環境照">
+                <img class="col-4 p-1" src="/img/01.jpg" alt="櫃台環境照">
                 <img class="col-4 p-1" src="https://github.com/Afonguwu/wisdom-win-vite/blob/gh-pages/img/%E5%87%BA%E7%A7%9F%E7%92%B0%E5%A2%83.jpg?raw=true" alt="出租環境照">
                 <img class="col-5 p-1" src="https://github.com/Afonguwu/wisdom-win-vite/blob/gh-pages/img/%E5%87%BA%E7%A7%9F%E8%BE%A6%E5%85%AC%E5%AE%A4A.jpg?raw=true" alt="出租辦公室">
                 <img class="col-7 p-1" src="https://github.com/Afonguwu/wisdom-win-vite/blob/gh-pages/img/%E5%A4%A7%E8%BE%A6%E5%85%AC%E6%A1%8C.jpg?raw=true" alt="大辦公桌">

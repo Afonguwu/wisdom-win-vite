@@ -1,6 +1,5 @@
 import { defineStore } from 'pinia';
 
-// eslint-disable-next-line import/prefer-default-export
 export const myStore = defineStore({
   id: 'team',
   state: () => ({
