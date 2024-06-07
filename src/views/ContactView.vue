@@ -1,6 +1,6 @@
 <template>
     <div class="container-xxl">
-    <bannerTitle style="background-image:url('https://github.com/Afonguwu/wisdom-win-vite/blob/gh-pages/img/serve-banner.jpg?raw=true'),linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3))
+    <bannerTitle style="background-image:url('img/contact.jpg'),linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3))
     ;">聯絡我們</bannerTitle>
         <div class="content-div-p">
             <p class="fs-5 mb-6">若需要諮詢或其他服務，務必事先聯繫，感謝您的配合!</p>
