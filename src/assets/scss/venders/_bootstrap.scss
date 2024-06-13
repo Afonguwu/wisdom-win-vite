@@ -1,38 +1,53 @@
 //custom
 // bootstrap/scss/_variable.scss
-$primary:     rgb(43,72,50);
-$secondary:   rgb(245, 245, 220);
-$success:     rgb(255, 255, 204) ;
-$info:        rgb(111, 161, 0) ;
-$warning:     rgb(204, 102, 51) ;
-$danger:      rgb(0, 168, 107);
+$primary: rgb(43, 71, 50);
+$secondary: rgb(245, 245, 220);
+$success: rgb(255, 255, 204);
+$info: rgb(111, 161, 0);
+$warning: rgb(204, 102, 51);
+$danger: rgb(0, 168, 107);
 
 $spacer: 1rem !default;
 $spacers: (
-  0 : 0,
-  1 : $spacer * .25,  //4
-  2 : $spacer * .5,   //8
-  3 : $spacer * .75,  //12
-  4 : $spacer,        //16
-  5 : $spacer * 1.25, //20
-  6 : $spacer * 1.5,  //24
-  7 : $spacer * 1.75, //28
-  8 : $spacer * 2,    //32
-  9 : $spacer * 2.625,//42
-  10: $spacer * 3.25, //52
+  0: 0,
+  1: $spacer * 0.25,
+  //4
+  2: $spacer * 0.5,
+  //8
+  3: $spacer * 0.75,
+  //12
+  4: $spacer,
+  //16
+  5: $spacer * 1.25,
+  //20
+  6: $spacer * 1.5,
+  //24
+  7: $spacer * 1.75,
+  //28
+  8: $spacer * 2,
+  //32
+  9: $spacer * 2.625,
+  //42
+  10: $spacer * 3.25,
+  //52
 );
 
 $font-size-base: 1rem !default;
 $font-sizes: (
-  1: $font-size-base*3,    //48
-  2: $font-size-base*2.265,//42
-  3: $font-size-base*2.25, //36
-  4: $font-size-base*2,    //32
-  5: $font-size-base*1.5,  //24
-  6: $font-size-base*1      //16
+  1: $font-size-base * 3,
+  //48
+  2: $font-size-base * 2.265,
+  //42
+  3: $font-size-base * 2.25,
+  //36
+  4: $font-size-base * 2,
+  //32
+  5: $font-size-base * 1.5,
+  //24
+  6: $font-size-base * 1 //16
 );
 
-$headings-margin-bottom:      0;
+$headings-margin-bottom: 0;
 
 //origin bootstrap
 @import 'bootstrap/scss/bootstrap';

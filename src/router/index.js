@@ -1,42 +1,42 @@
-import { createRouter, createWebHashHistory } from 'vue-router';
-import HomeView from '../views/HomeView.vue';
-import ServeView from '../views/ServeView.vue';
-import TeamView from '../views/TeamView.vue';
-import ProfileView from '../views/ProfileView.vue';
-import ContactView from '../views/ContactView.vue';
-import JointView from '../views/JointView.vue';
+import { createRouter, createWebHashHistory } from 'vue-router'
+import HomeView from '@/views/HomeView.vue'
+import ServeView from '@/views/ServeView.vue'
+import TeamView from '@/views/TeamView.vue'
+import ProfileView from '@/views/ProfileView.vue'
+import ContactView from '@/views/ContactView.vue'
+import JointView from '@/views/JointView.vue'
 
 const routes = [
   {
     path: '/',
     name: 'home',
-    component: HomeView,
+    component: HomeView
   },
   {
     path: '/serve',
     name: 'serve',
-    component: ServeView,
+    component: ServeView
   },
   {
     path: '/team',
     name: 'team',
-    component: TeamView,
+    component: TeamView
   },
   {
     path: '/contact',
     name: 'contact',
-    component: ContactView,
+    component: ContactView
   },
   {
     path: '/joint',
     name: 'joint',
-    component: JointView,
+    component: JointView
   },
   {
-    path: '/profile',
+    path: '/profile/:cat/:name',
     name: 'profile',
-    component: ProfileView,
-  },
+    component: ProfileView
+  }
   // example
   // {
   //   path: '/about',
@@ -46,7 +46,7 @@ const routes = [
   //   // which is lazy-loaded when the route is visited.
   //   component: AboutView,
   // },
-];
+]
 
 const router = createRouter({
   history: createWebHashHistory(),
@@ -55,11 +55,11 @@ const router = createRouter({
     if (to.hash) {
       return {
         el: to.hash,
-        behavior: 'smooth',
-      };
+        behavior: 'smooth'
+      }
     }
-    return { top: 0 };
-  },
-});
+    return { top: 0 }
+  }
+})
 
-export default router;
+export default router

@@ -4,14 +4,15 @@
   <FooterBar></FooterBar>
 </template>
 <script>
-import HeaderNav from './components/HeaderNav.vue';
-import FooterBar from './components/FooterBar.vue';
+import HeaderNav from './components/HeaderNav.vue'
+import FooterBar from './components/FooterBar.vue'
 
 export default {
   components: {
-    HeaderNav, FooterBar,
-  },
-};
+    HeaderNav,
+    FooterBar
+  }
+}
 </script>
 <style lang="scss">
 @import '@/assets/scss/all.scss';
