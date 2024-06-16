@@ -5,8 +5,12 @@
         class="w-100 align-self-bottom banner-color mt-auto p-10 d-flex flex-column align-items-center text-center"
       >
         <div class="text-info-emphasis mb-3 text-nowrap">
-          <p class="fs-2 fw-bold">WISDOM & WIN</p>
-          <p class="display-1 fw-bold">以智取勝</p>
+          <p class="fs-2 fw-bold mb-0">
+            <span class="text-info">WISDOM</span> & <span class="text-info">WIN</span>
+          </p>
+          <p class="display-1 fw-bold">
+            以<span class="text-info">智</span>取<span class="text-info">勝</span>
+          </p>
         </div>
         <router-link class="btn-action btn-dark fs-5" to="/contact"> 聯絡我們 </router-link>
       </div>

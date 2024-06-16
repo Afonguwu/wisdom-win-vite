@@ -1,14 +1,13 @@
 // nav space
-.margin-nav{
-    margin-top: 3.75rem;
-    @include media-breakpoint-up(md) {
-        margin-top: 4.0625rem;
-    
-    }
-    @include media-breakpoint-up(lg) {
-        margin-top: 4.8125rem;
-    }
-    @include media-breakpoint-up(xl) {
-        margin-top: 5rem;
-    }
-    }
+.margin-nav {
+  margin-top: 3.5rem;
+  @include media-breakpoint-up(md) {
+    margin-top: 4.125rem;
+  }
+  @include media-breakpoint-up(lg) {
+    margin-top: 4.25rem;
+  }
+  @include media-breakpoint-up(xl) {
+    margin-top: 4.5rem;
+  }
+}

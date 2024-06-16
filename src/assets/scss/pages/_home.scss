@@ -1,5 +1,5 @@
 .banner-img {
-  background: url('/img/01.jpg');
+  background-image: url('/img/01-sm.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -9,6 +9,7 @@
     min-height: 450px;
   }
   @include media-breakpoint-up(lg) {
+    background-image: url('/img/01.jpg');
     height: auto;
     min-height: 650px;
   }

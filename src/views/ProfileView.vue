@@ -18,11 +18,13 @@
           </button>
           <ul class="collapse list-unstyled text-center fs-5" id="collapseLocalLawyer">
             <li class="py-2 list-hover" v-for="item in internalList.list" v-bind:key="item.name">
-              <a
-                class="text-decoration-none d-block text-primary"
+              <button
+                type="button"
+                class="w-100 text-primary bg-transparent border-0"
                 v-on:click="change(item.name, internalList.name)"
-                >{{ item.name }}
-              </a>
+              >
+                {{ item.name }}
+              </button>
             </li>
           </ul>
         </div>
@@ -41,11 +43,13 @@
           </button>
           <ul class="collapse list-unstyled text-center fs-5" id="collapseJointLawyer">
             <li class="py-2 list-hover" v-for="item in jointList.list" v-bind:key="item.name">
-              <a
-                class="text-decoration-none d-block text-primary"
+              <button
+                type="button"
+                class="w-100 text-primary bg-transparent border-0"
                 v-on:click="change(item.name, jointList.name)"
-                >{{ item.name }}
-              </a>
+              >
+                {{ item.name }}
+              </button>
             </li>
           </ul>
         </div>

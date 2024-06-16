@@ -19,24 +19,35 @@
       >
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav w-100 fs-4 justify-content-end ms-auto mt-2 mt-lg-0">
+      <div class="collapse navbar-collapse" id="navbarSupportedContent" ref="collapse">
+        <ul class="navbar-nav w-100 fs-5 justify-content-end ms-auto mt-2 mt-lg-0">
           <li class="nav-item text-center">
-            <router-link class="nav-link text-nowrap" v-bind:to="{ path: '/', hash: '#about' }"
+            <router-link
+              class="nav-link text-nowrap"
+              v-bind:to="{ path: '/', hash: '#about' }"
+              v-on:click="closeCollapse"
               >關於智勝</router-link
             >
           </li>
           <li class="nav-item text-center">
-            <router-link class="nav-link text-nowrap" to="/serve">服務項目</router-link>
+            <router-link class="nav-link text-nowrap" to="/serve" v-on:click="closeCollapse"
+              >服務項目</router-link
+            >
           </li>
           <li class="nav-item text-center">
-            <router-link class="nav-link text-nowrap" to="/team"> 律師團隊 </router-link>
+            <router-link class="nav-link text-nowrap" to="/team" v-on:click="closeCollapse">
+              律師團隊
+            </router-link>
           </li>
           <li class="nav-item text-center">
-            <router-link class="nav-link text-nowrap" to="/contact">聯絡我們</router-link>
+            <router-link class="nav-link text-nowrap" to="/contact" v-on:click="closeCollapse"
+              >聯絡我們</router-link
+            >
           </li>
           <li class="nav-item text-center">
-            <router-link class="nav-link text-nowrap" to="/joint">合署資訊</router-link>
+            <router-link class="nav-link text-nowrap" to="/joint" v-on:click="closeCollapse"
+              >合署資訊</router-link
+            >
           </li>
         </ul>
       </div>
@@ -46,10 +57,10 @@
 
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue'
+import Collapse from 'bootstrap/js/dist/collapse'
 
-// header scroll background */
+// header scroll background
 const scrollPosition = ref(window.scrollY > 0)
-// console.log(scrollPosition);
 const handleScroll = () => {
   if (window.scrollY > 0) {
     scrollPosition.value = true
@@ -57,10 +68,29 @@ const handleScroll = () => {
     scrollPosition.value = false
   }
 }
+// collapse control
+const collapse = ref(null)
+let collapseInstance = null
+const closeCollapse = () => {
+  collapseInstance.hide()
+}
+const handleClickOutside = (event) => {
+  if (collapse.value && !collapse.value.contains(event.target)) {
+    closeCollapse()
+  }
+}
+
 onMounted(() => {
+  // header scroll background
   window.addEventListener('scroll', handleScroll)
+  // collapse control
+  document.addEventListener('click', handleClickOutside)
+  collapseInstance = new Collapse(collapse.value, { toggle: false })
 })
 onUnmounted(() => {
+  // header scroll background
   window.removeEventListener('scroll', handleScroll)
+  // collapse control
+  document.removeEventListener('click', handleClickOutside)
 })
 </script>

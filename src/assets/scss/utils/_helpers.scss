@@ -1,40 +1,40 @@
 .opaque {
-    opacity:0.85
+  opacity: 0.85;
 }
-.content-div-p{
-    padding-top: 2.625rem;
-    padding-bottom: 2.625rem;
-    @include media-breakpoint-up(md){
-        padding: 3.25rem 1.5rem;
+.content-div-p {
+  padding-top: 2.625rem;
+  padding-bottom: 2.625rem;
+  @include media-breakpoint-up(md) {
+    padding: 3.25rem 1.5rem;
+  }
+  @include media-breakpoint-up(lg) {
+    padding: 3.875rem 2rem;
+  }
+}
+.list-icon {
+  li {
+    text-indent: -0.8rem;
+    padding-left: 2rem;
+    &:before {
+      width: 12px;
+      content: 'new_releases';
+      font-family: 'Material Symbols Outlined';
+      display: inline-block;
+      color: $info;
     }
-    @include media-breakpoint-up(lg){
-        padding: 3.875rem  2rem;
-    }
-}   
-.list-icon{
-    li{
-        text-indent: -0.8rem;
-        padding-left: 2rem;
-        &:before{
-            width: 12px;
-            content:"new_releases";
-            font-family:"Material Symbols Outlined";
-            display: inline-block;
-            color: $info;
-        }
-    }
-} 
-.banner-size{
-    background-size:cover;
-    background-repeat:no-repeat;
-    background-position:center;
-    height:250px;
-    @include media-breakpoint-up(md){
-        height:auto;
-        min-height: 300px;
-      }
-      @include media-breakpoint-up(lg){
-        height:auto;
-        min-height: 400px;
-      }
+  }
+}
+.banner-size {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 250px;
+  @include media-breakpoint-up(md) {
+    height: auto;
+    min-height: 300px;
+  }
+  @include media-breakpoint-up(lg) {
+    height: auto;
+    min-height: 400px;
+  }
 }
