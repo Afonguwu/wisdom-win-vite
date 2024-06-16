@@ -82,14 +82,14 @@ const handleClickOutside = (event) => {
 
 onMounted(() => {
   // header scroll background
-  window.addEventListener('scroll', handleScroll)
+  document.addEventListener('scroll', handleScroll)
   // collapse control
   document.addEventListener('click', handleClickOutside)
   collapseInstance = new Collapse(collapse.value, { toggle: false })
 })
 onUnmounted(() => {
   // header scroll background
-  window.removeEventListener('scroll', handleScroll)
+  document.removeEventListener('scroll', handleScroll)
   // collapse control
   document.removeEventListener('click', handleClickOutside)
 })
