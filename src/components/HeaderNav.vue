@@ -11,8 +11,7 @@
       <button
         class="navbar-toggler d-lg-none border-0 p-0 shadow-none"
         type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navbarSupportedContent"
+        v-on:click="toggleCollapse"
         aria-controls="navbarSupportedContent"
         aria-expanded="false"
         aria-label="Toggle navigation"
@@ -26,13 +25,14 @@
               class="nav-link text-nowrap"
               v-bind:to="{ path: '/', hash: '#about' }"
               v-on:click="closeCollapse"
-              >關於智勝</router-link
             >
+              關於智勝
+            </router-link>
           </li>
           <li class="nav-item text-center">
-            <router-link class="nav-link text-nowrap" to="/serve" v-on:click="closeCollapse"
-              >服務項目</router-link
-            >
+            <router-link class="nav-link text-nowrap" to="/serve" v-on:click="closeCollapse">
+              服務項目
+            </router-link>
           </li>
           <li class="nav-item text-center">
             <router-link class="nav-link text-nowrap" to="/team" v-on:click="closeCollapse">
@@ -40,14 +40,14 @@
             </router-link>
           </li>
           <li class="nav-item text-center">
-            <router-link class="nav-link text-nowrap" to="/contact" v-on:click="closeCollapse"
-              >聯絡我們</router-link
-            >
+            <router-link class="nav-link text-nowrap" to="/contact" v-on:click="closeCollapse">
+              聯絡我們
+            </router-link>
           </li>
           <li class="nav-item text-center">
-            <router-link class="nav-link text-nowrap" to="/joint" v-on:click="closeCollapse"
-              >合署資訊</router-link
-            >
+            <router-link class="nav-link text-nowrap" to="/joint" v-on:click="closeCollapse">
+              合署資訊
+            </router-link>
           </li>
         </ul>
       </div>
@@ -68,12 +68,30 @@ const handleScroll = () => {
     scrollPosition.value = false
   }
 }
+onMounted(() => {
+  document.addEventListener('scroll', handleScroll)
+})
+onUnmounted(() => {
+  document.removeEventListener('scroll', handleScroll)
+})
+
 // collapse control
 const collapse = ref(null)
 let collapseInstance = null
-const closeCollapse = () => {
-  collapseInstance.hide()
+// ham icon
+const toggleCollapse = () => {
+  if (collapseInstance) {
+    collapseInstance.toggle()
+  }
 }
+// collapse items
+const closeCollapse = () => {
+  console.log(collapseInstance)
+  if (collapseInstance && collapseInstance._isShown) {
+    collapseInstance.hide()
+  }
+}
+// tap out of collapse
 const handleClickOutside = (event) => {
   if (collapse.value && !collapse.value.contains(event.target)) {
     closeCollapse()
@@ -81,15 +99,11 @@ const handleClickOutside = (event) => {
 }
 
 onMounted(() => {
-  // header scroll background
-  document.addEventListener('scroll', handleScroll)
   // collapse control
   document.addEventListener('click', handleClickOutside)
   collapseInstance = new Collapse(collapse.value, { toggle: false })
 })
 onUnmounted(() => {
-  // header scroll background
-  document.removeEventListener('scroll', handleScroll)
   // collapse control
   document.removeEventListener('click', handleClickOutside)
 })
