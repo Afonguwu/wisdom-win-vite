@@ -22,7 +22,7 @@
         <ul class="navbar-nav w-100 fs-5 justify-content-end ms-auto mt-2 mt-lg-0">
           <li class="nav-item text-center">
             <router-link
-              class="nav-link text-nowrap"
+              class="nav-link text-nowrap text-light"
               v-bind:to="{ path: '/', hash: '#about' }"
               v-on:click="closeCollapse"
             >
@@ -30,22 +30,38 @@
             </router-link>
           </li>
           <li class="nav-item text-center">
-            <router-link class="nav-link text-nowrap" to="/serve" v-on:click="closeCollapse">
+            <router-link
+              class="nav-link text-nowrap text-light"
+              to="/serve"
+              v-on:click="closeCollapse"
+            >
               服務項目
             </router-link>
           </li>
           <li class="nav-item text-center">
-            <router-link class="nav-link text-nowrap" to="/team" v-on:click="closeCollapse">
+            <router-link
+              class="nav-link text-nowrap text-light"
+              to="/team"
+              v-on:click="closeCollapse"
+            >
               律師團隊
             </router-link>
           </li>
           <li class="nav-item text-center">
-            <router-link class="nav-link text-nowrap" to="/contact" v-on:click="closeCollapse">
+            <router-link
+              class="nav-link text-nowrap text-light"
+              to="/contact"
+              v-on:click="closeCollapse"
+            >
               聯絡我們
             </router-link>
           </li>
           <li class="nav-item text-center">
-            <router-link class="nav-link text-nowrap" to="/joint" v-on:click="closeCollapse">
+            <router-link
+              class="nav-link text-nowrap text-light"
+              to="/joint"
+              v-on:click="closeCollapse"
+            >
               合署資訊
             </router-link>
           </li>
