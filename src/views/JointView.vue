@@ -30,27 +30,20 @@
       <h3 class="fs-2 fw-bold mb-4">環境照片</h3>
       <div class="row">
         <img
-          class="col-6 p-1"
-          src="/img/02.jpg"
-          alt="門口環境照"
-          v-on:click="showLightbox = true"
+          v-for="(item, index) in images"
+          v-bind:key="item.alt"
+          class="col-6 p-4"
+          v-bind:src="`${item.src}`"
+          v-bind:alt="item.alt"
+          v-on:click="openLightbox(index)"
         />
-        <img
-          class="col-6 p-1"
-          src="/img/03.jpg"
-          alt="沙發區環境照"
-          v-on:click="showLightbox = true"
-        />
-        <img class="col-4 p-1" src="/img/04.jpg" alt="會議室環境照" />
-        <img class="col-4 p-1" src="/img/01.jpg" alt="櫃台環境照" />
-        <img class="col-4 p-1" src="/img/05.jpg" alt="出租環境照" />
-        <img class="col-5 p-1" src="/img/06.jpg" alt="出租辦公室" />
-        <img class="col-7 p-1" src="/img/07.jpg" alt="大辦公桌" />
         <vue-easy-lightbox
-          v-bind:visible="showLightbox"
-          v-bind:imgs="['img/02.jpg', 'img/04.jpg']"
-          v-on:hide="showLightbox = false"
-        />
+          v-bind:visible="visible"
+          v-bind:imgs="images.map((image) => `${image.src}`)"
+          v-bind:index="currentIndex"
+          v-on:hide="visible = false"
+        >
+        </vue-easy-lightbox>
       </div>
     </div>
   </div>
@@ -59,6 +52,40 @@
 import bannerTitle from '@/components/BannerTitle.vue'
 import { ref } from 'vue'
 import VueEasyLightbox from 'vue-easy-lightbox'
-
-const showLightbox = ref(false)
+const images = [
+  {
+    src: 'img/01.jpg',
+    alt: '櫃台環境照'
+  },
+  {
+    src: 'img/02.jpg',
+    alt: '門口環境照'
+  },
+  {
+    src: 'img/03.jpg',
+    alt: '沙發區環境照'
+  },
+  {
+    src: 'img/04.jpg',
+    alt: '會議室環境照'
+  },
+  {
+    src: 'img/05.jpg',
+    alt: '出租環境照'
+  },
+  {
+    src: 'img/06.jpg',
+    alt: '出租辦公室'
+  },
+  {
+    src: 'img/07.jpg',
+    alt: '大辦公桌'
+  }
+]
+const visible = ref(false)
+const currentIndex = ref(0)
+const openLightbox = (index) => {
+  currentIndex.value = index
+  visible.value = true
+}
 </script>
