@@ -66,23 +66,10 @@
     </div>
   </div>
 </template>
-<script>
-import { teamStore } from '@/stores/teamStore'
+<script setup>
+import teamData from '@/data/team.json'
+import { selectItem } from '@/util/profileFn.js'
 import { ref } from 'vue'
-export default {
-  setup() {
-    const teamList = teamStore()
-    const internalList = ref(teamList.lawyers[0])
-    const jointList = ref(teamList.lawyers[1])
-    const selectItem = (name, cat) => {
-      teamList.selectItem(name, cat)
-    }
-
-    return {
-      internalList,
-      jointList,
-      selectItem
-    }
-  }
-}
+const internalList = ref(teamData[0])
+const jointList = ref(teamData[1])
 </script>

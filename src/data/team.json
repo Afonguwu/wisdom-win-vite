@@ -1,0 +1,126 @@
+[
+  {
+    "id": 1,
+    "name": "主持律師",
+    "list": [
+      {
+        "id": 101,
+        "name": "謝曉明律師",
+        "imageURL": "https://images.unsplash.com/photo-1642911353098-42efaae7f6d4?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "title": "所長",
+        "certificate": ["律師執照", "不動產經紀人執照", "地政士執照"],
+        "experience": [
+          "智勝法律事務所所長",
+          "高雄大學法律研究所碩專班",
+          " 高雄市立空中大學法政學系"
+        ],
+        "area": ["全台灣(南部為主)"],
+        "category": [
+          ["民事訴訟", 30],
+          ["刑事辯護", 20],
+          ["法律扶助", 50]
+        ]
+      },
+      {
+        "id": 102,
+        "name": "謝小花律師",
+        "imageURL": "https://images.unsplash.com/photo-1642911353098-42efaae7f6d4?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "title": "主持律師",
+        "certificate": ["律師執照", "不動產經紀人執照", "地政士執照"],
+        "experience": [
+          "智勝法律事務所所長",
+          "高雄大學法律研究所碩專班",
+          "高雄市立空中大學法政學系"
+        ],
+        "area": ["全台灣(南部為主)"],
+        "category": [
+          ["不動產法律服務", 70],
+          ["刑事辯護", 20],
+          ["繼承規劃", 10]
+        ]
+      },
+      {
+        "id": 103,
+        "name": "謝小羊律師",
+        "imageURL": "https://images.unsplash.com/photo-1642911353098-42efaae7f6d4?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "title": "主持律師",
+        "certificate": ["律師執照", "不動產經紀人執照", "地政士執照"],
+        "experience": [
+          "智勝法律事務所所長",
+          "高雄大學法律研究所碩專班",
+          "高雄市立空中大學法政學系"
+        ],
+        "area": ["高雄、台南"],
+        "category": [
+          ["繼承規劃", 30],
+          ["公司法律事務", 10],
+          ["法律扶助", 50],
+          ["民事訴訟", 50]
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "合署律師",
+    "list": [
+      {
+        "id": 201,
+        "name": "黃曉芳律師",
+        "imageURL": "https://images.unsplash.com/photo-1642911353098-42efaae7f6d4?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "title": "合署律師",
+        "certificate": ["律師執照", "不動產經紀人執照", "地政士執照"],
+        "experience": [
+          "智勝法律事務所合署律師",
+          "高雄大學法律研究所碩專班",
+          "高雄市立空中大學法政學系"
+        ],
+        "area": ["台中、嘉義"],
+        "category": [
+          ["刑事辯護", 30],
+          ["繼承規劃", 20],
+          ["法律扶助", 50],
+          ["不動產法律服務", 10]
+        ]
+      },
+      {
+        "id": 202,
+        "name": "張志宏律師",
+        "imageURL": "https://images.unsplash.com/photo-1642911353098-42efaae7f6d4?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "title": "合署律師",
+        "certificate": ["律師執照", "不動產經紀人執照", "地政士執照"],
+        "experience": [
+          "智勝法律事務所所長",
+          "高雄大學法律研究所碩專班",
+          "高雄市立空中大學法政學系"
+        ],
+        "area": ["全台灣(南部為主)"],
+        "category": [
+          ["不動產法律服務", 10],
+          ["民事訴訟", 30],
+          ["刑事辯護", 20],
+          ["法律扶助", 50]
+        ]
+      },
+      {
+        "id": 203,
+        "name": "葉小愛律師",
+        "imageURL": "https://images.unsplash.com/photo-1642911353098-42efaae7f6d4?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "title": "合署律師",
+        "certificate": ["律師執照", "不動產經紀人執照", "地政士執照"],
+        "experience": [
+          "智勝法律事務所所長",
+          "高雄大學法律研究所碩專班",
+          "高雄市立空中大學法政學系"
+        ],
+        "area": ["全台灣(南部為主)"],
+        "category": [
+          ["民事訴訟", 30],
+          ["刑事辯護", 20],
+          ["法律扶助", 50],
+          ["不動產法律服務", 10]
+        ]
+      }
+    ]
+  }
+]

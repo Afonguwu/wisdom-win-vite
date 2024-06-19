@@ -7,16 +7,18 @@
           <button
             class="text-info bg-info-subtle border border-info-subtle py-2 fs-5 w-100 arrow-down"
             type="button"
-            v-on:click="iconValue1 = !iconValue1"
+            v-on:click="toggleSideCollapse1"
             v-bind:class="{ 'arrow-up': iconValue1 }"
-            data-bs-toggle="collapse"
-            data-bs-target="#collapseLocalLawyer"
             aria-expanded="false"
             aria-controls="collapseLocalLawyer"
           >
             {{ internalList.name }}
           </button>
-          <ul class="collapse list-unstyled text-center fs-5" id="collapseLocalLawyer">
+          <ul
+            class="collapse list-unstyled text-center fs-5"
+            id="collapseLocalLawyer"
+            ref="collapse1"
+          >
             <li class="py-2 list-hover" v-for="item in internalList.list" v-bind:key="item.name">
               <button
                 type="button"
@@ -32,16 +34,18 @@
           <button
             class="text-info bg-info-subtle border border-info-subtle py-2 fs-5 w-100 arrow-down"
             type="button"
-            v-on:click="iconValue2 = !iconValue2"
+            v-on:click="toggleSideCollapse2"
             v-bind:class="{ 'arrow-up': iconValue2 }"
-            data-bs-toggle="collapse"
-            data-bs-target="#collapseJointLawyer"
             aria-expanded="false"
             aria-controls="collapseJointLawyer"
           >
             {{ jointList.name }}
           </button>
-          <ul class="collapse list-unstyled text-center fs-5" id="collapseJointLawyer">
+          <ul
+            class="collapse list-unstyled text-center fs-5"
+            id="collapseJointLawyer"
+            ref="collapse2"
+          >
             <li class="py-2 list-hover" v-for="item in jointList.list" v-bind:key="item.name">
               <button
                 type="button"
@@ -125,63 +129,65 @@
   </div>
 </template>
 
-<script>
+<script setup>
 import { useRouter, useRoute } from 'vue-router'
-import { teamStore } from '@/stores/teamStore'
-import { onMounted, ref, watchEffect, computed } from 'vue'
+import { onMounted, ref, watchEffect } from 'vue'
+import Collapse from 'bootstrap/js/dist/collapse'
+import teamData from '@/data/team.json'
+import { selectItem, selectedItem, selectedCat, initChart } from '@/util/profileFn.js'
 
-export default {
-  setup() {
-    const router = useRouter()
-    const route = useRoute()
-    const teamList = teamStore()
-    const internalList = teamList.lawyers[0]
-    const jointList = teamList.lawyers[1]
-    const initChart = (category) => {
-      teamList.initChart(category)
-    }
-    // list arrow-icon change
-    const iconValue1 = ref(0)
-    const iconValue2 = ref(0)
-    const selectItem = (name, cat) => {
-      teamList.selectItem(name, cat)
-    }
-    const selectedItem = computed(() => teamList.selectedItem)
-    //渲染函式
-    const init = (item, cat) => {
-      router.push({
-        params: { name: item, cat: cat }
-      })
-      selectItem(item, cat)
-    }
-    //變更路由變數 (sidebar v-on)
-    const change = (item, cat) => {
-      router.push({
-        params: { name: item, cat: cat }
-      })
-    }
-    //監聽路由參數
-    watchEffect(() => {
-      //console.log(route.params, teamList.selectedItem)
-      init(route.params.name, route.params.cat)
-      initChart(teamList.selectedItem.category)
-      //console.log(teamList.selectedItem)
-    })
-    //初始渲染
-    onMounted(() => {
-      //console.log(route.params, teamList.selectedItem)
-      init(teamList.selectedItem.name, teamList.selectedCat)
-      initChart(teamList.selectedItem.category)
-    })
-    //
-    return {
-      internalList,
-      jointList,
-      iconValue1,
-      iconValue2,
-      selectedItem,
-      change
-    }
+const router = useRouter()
+const route = useRoute()
+const internalList = ref(teamData[0])
+const jointList = ref(teamData[1])
+
+// toggle sideCollapse icon change
+const iconValue1 = ref(0)
+const iconValue2 = ref(0)
+
+// toggle sideCollapse
+const collapse1 = ref(null)
+let sideCollapse1 = null
+const toggleSideCollapse1 = () => {
+  if (sideCollapse1) {
+    sideCollapse1.toggle()
+    iconValue1.value = !iconValue1.value
   }
 }
+const collapse2 = ref(null)
+let sideCollapse2 = null
+const toggleSideCollapse2 = () => {
+  if (sideCollapse2) {
+    sideCollapse2.toggle()
+    iconValue2.value = !iconValue2.value
+  }
+}
+onMounted(() => {
+  sideCollapse1 = new Collapse(collapse1.value, { toggle: false })
+  sideCollapse2 = new Collapse(collapse2.value, { toggle: false })
+})
+
+//渲染函式
+const init = (item, cat) => {
+  router.push({
+    params: { name: item, cat: cat }
+  })
+  selectItem(item, cat)
+}
+//變更路由變數 (sidebar v-on)
+const change = (item, cat) => {
+  router.push({
+    params: { name: item, cat: cat }
+  })
+}
+//監聽路由參數
+watchEffect(() => {
+  init(route.params.name, route.params.cat)
+  initChart(selectedItem.category)
+})
+//初始渲染
+onMounted(() => {
+  init(selectedItem.name, selectedCat)
+  initChart(selectedItem.category)
+})
 </script>
