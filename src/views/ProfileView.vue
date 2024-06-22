@@ -19,7 +19,7 @@
             id="collapseLocalLawyer"
             ref="collapse1"
           >
-            <li class="py-2 list-hover" v-for="item in internalList.list" v-bind:key="item.name">
+            <li class="py-2 list-hover" v-for="item in internalList.lawyers" v-bind:key="item.name">
               <button
                 type="button"
                 class="w-100 text-primary bg-transparent border-0"
@@ -46,7 +46,7 @@
             id="collapseJointLawyer"
             ref="collapse2"
           >
-            <li class="py-2 list-hover" v-for="item in jointList.list" v-bind:key="item.name">
+            <li class="py-2 list-hover" v-for="item in jointList.lawyers" v-bind:key="item.name">
               <button
                 type="button"
                 class="w-100 text-primary bg-transparent border-0"
@@ -63,12 +63,7 @@
         <!-- name card -->
         <div class="row p-4">
           <div class="col-12 col-lg-3 p-1 text-center text-lg-start">
-            <img
-              class="img-fluid"
-              src="https://images.unsplash.com/photo-1642911353098-42efaae7f6d4?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              alt=""
-              style="max-height: 400px"
-            />
+            <img class="img-fluid" :src="selectedItem.imageURL" alt="" style="max-height: 400px" />
           </div>
           <div class="col-12 col-lg-6 m-auto text-center text-lg-start">
             <span class="d-block fs-4 mb-2 text-nowrap text-info">{{ selectedItem.title }}</span>
@@ -134,7 +129,7 @@ import { useRouter, useRoute } from 'vue-router'
 import { onMounted, ref, watchEffect } from 'vue'
 import Collapse from 'bootstrap/js/dist/collapse'
 import teamData from '@/data/team.json'
-import { selectItem, selectedItem, selectedCat, initChart } from '@/util/profileFn.js'
+import { selectItem, selectedItem, initChart } from '@/util/profileFn.js'
 
 const router = useRouter()
 const route = useRoute()
@@ -187,7 +182,7 @@ watchEffect(() => {
 })
 //初始渲染
 onMounted(() => {
-  init(selectedItem.name, selectedCat)
+  init(route.params.name, route.params.cat)
   initChart(selectedItem.category)
 })
 </script>

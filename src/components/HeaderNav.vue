@@ -102,7 +102,6 @@ const toggleCollapse = () => {
 }
 // collapse items
 const closeCollapse = () => {
-  console.log(collapseInstance)
   if (collapseInstance && collapseInstance._isShown) {
     collapseInstance.hide()
   }

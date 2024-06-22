@@ -22,7 +22,14 @@
     <!-- team -->
     <div class="py-10 mb-10">
       <h2 class="title mb-6 text-primary">律師團隊</h2>
-      <teamBlock></teamBlock>
+      <h3 class="fs-5 border-bottom border-info border-2 mb-1 text-info fw-bold">
+        {{ internalList.name }}
+      </h3>
+      <teamSwiper v-bind:data="internalList"></teamSwiper>
+      <h3 class="fs-5 border-bottom border-info border-2 mb-1 text-info fw-bold">
+        {{ jointList.name }}
+      </h3>
+      <teamSwiper v-bind:data="jointList"></teamSwiper>
       <router-link class="btn-action btn-light fs-6 ms-auto" to="/team"> more </router-link>
     </div>
     <!-- about -->
@@ -74,14 +81,11 @@
   </div>
 </template>
 
-<script>
+<script setup>
+import { ref } from 'vue'
+import teamData from '@/data/team.json'
+const internalList = ref(teamData[0])
+const jointList = ref(teamData[1])
+import teamSwiper from '@/components/TeamSwiper.vue'
 import serveCard from '@/components/ServeCard.vue'
-import teamBlock from '@/components/TeamCards.vue'
-
-export default {
-  components: {
-    serveCard,
-    teamBlock
-  }
-}
 </script>

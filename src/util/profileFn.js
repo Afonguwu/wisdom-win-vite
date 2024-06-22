@@ -37,7 +37,7 @@ const selectItem = (name, cat) => {
   const category = teamData.find((item) => item.name === cat)
   if (category) {
     selectedCat = category.name
-    const item = category.list.find((item) => item.name === name)
+    const item = category.lawyers.find((item) => item.name === name)
     if (item) {
       selectedItem = item
     }
