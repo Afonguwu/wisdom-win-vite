@@ -13,9 +13,11 @@
 }
 .list-icon {
   li {
-    text-indent: -0.8rem;
+    display: flex;
+    align-items: center;
     padding-left: 2rem;
     &:before {
+      margin-right: 1rem;
       width: 12px;
       content: 'new_releases';
       font-family: 'Material Symbols Outlined';
