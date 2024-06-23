@@ -30,12 +30,12 @@
             <div class="col-12 m-auto">
               <span class="d-block fs-5 mb-2 text-nowrap text-info">{{ item.title }}</span>
               <h3>
-                <router-link
-                  to="/profile/:cat/:name"
+                <a
                   class="stretched-link text-decoration-none text-nowrap fw-bold"
-                  v-on:click="selectItem(item.name, internalList.name)"
-                  >{{ item.name }}</router-link
-                >
+                  v-on:click="gotoProfile(item.name, internalList.name)"
+                  type="button"
+                  >{{ item.name }}
+                </a>
               </h3>
             </div>
           </div>
@@ -63,12 +63,12 @@
             <div class="col-12 m-auto">
               <span class="d-block fs-5 mb-2 text-nowrap text-info">{{ item.title }}</span>
               <h3>
-                <router-link
-                  to="/profile/:cat/:name"
+                <a
                   class="stretched-link text-decoration-none text-nowrap fw-bold"
-                  v-on:click="selectItem(item.name, jointList.name)"
-                  >{{ item.name }}</router-link
-                >
+                  v-on:click="gotoProfile(item.name, jointList.name)"
+                  type="button"
+                  >{{ item.name }}
+                </a>
               </h3>
             </div>
           </div>
@@ -79,9 +79,15 @@
 </template>
 <script setup>
 import bannerTitle from '@/components/BannerTitle.vue'
-import teamData from '@/data/team.json'
-import { selectItem } from '@/util/profileFn.js'
+//import { selectItem } from '@/util/profileFn.js'
 import { ref } from 'vue'
+import { useRouter } from 'vue-router'
+const router = useRouter()
+const gotoProfile = (name, cat) => {
+  router.push({ name: 'profile', params: { cat: cat, name: name } })
+}
+
+import teamData from '@/data/team.json'
 const internalList = ref(teamData[0])
 const jointList = ref(teamData[1])
 </script>

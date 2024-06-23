@@ -82,10 +82,13 @@
 </template>
 
 <script setup>
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 import { ref } from 'vue'
 import teamData from '@/data/team.json'
 const internalList = ref(teamData[0])
 const jointList = ref(teamData[1])
 import teamSwiper from '@/components/TeamSwiper.vue'
 import serveCard from '@/components/ServeCard.vue'
+AOS.init()
 </script>
