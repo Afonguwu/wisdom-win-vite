@@ -39,7 +39,7 @@ jobs:
         run: npm ci
       - name: Build
          env:
-          VITE_GOOGLE_API_KEY: ${{ secrets.VITE_GOOGLE_API_KEY }}  # 引用 GitHub Secret
+          API_KEY: ${{ secrets.API_KEY }}  # 引用 GitHub Secret
         run: npm run build
       - name: Setup Pages
         uses: actions/configure-pages@v4

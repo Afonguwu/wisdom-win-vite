@@ -33,7 +33,7 @@
             style="border: 0; max-width: 100%"
             load="lazy"
             allowfullscreen
-            v-bind:src="`https://www.google.com/maps/embed/v1/search?q=台灣高雄市前金區中正四路智勝法律事務所&key=${API_KEY}`"
+            v-bind:src="`https://www.google.com/maps/embed/v1/search?q=台灣高雄市前金區中正四路智勝法律事務所&key=${process.env.API_KEY}`"
           ></iframe>
         </li>
       </ul>
@@ -42,5 +42,4 @@
 </template>
 <script setup>
 import bannerTitle from '@/components/BannerTitle.vue'
-const API_KEY = import.meta.env.VITE_GOOGLE_API_KEY
 </script>
