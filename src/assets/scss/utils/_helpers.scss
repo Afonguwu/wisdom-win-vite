@@ -14,8 +14,10 @@
 .list-icon {
   li {
     display: flex;
-    align-items: center;
-    padding-left: 2rem;
+    align-items: top;
+    @include media-breakpoint-up(lg) {
+      align-items: center;
+    }
     &:before {
       margin-right: 1rem;
       width: 12px;

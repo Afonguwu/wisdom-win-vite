@@ -17,7 +17,7 @@
       <div class="row g-3 mb-4">
         <serveCard></serveCard>
       </div>
-      <router-link class="btn-action btn-light fs-6 ms-auto" to="/serve"> more </router-link>
+      <router-link class="btn-action btn-light fs-6 btn-align mt-6" to="/serve"> more </router-link>
     </div>
     <!-- team -->
     <div class="py-10 mb-10" data-aos="fade-left">
@@ -30,7 +30,7 @@
         {{ jointList.name }}
       </h3>
       <teamSwiper v-bind:data="jointList"></teamSwiper>
-      <router-link class="btn-action btn-light fs-6 ms-auto" to="/team"> more </router-link>
+      <router-link class="btn-action btn-light fs-6 btn-align mt-4" to="/team"> more </router-link>
     </div>
     <!-- about -->
     <div class="bg-danger-subtle p-10 mb-10" id="about" data-aos="fade-up">
@@ -56,14 +56,16 @@
             alt="出租辦公室"
           />
         </div>
-        <div class="col-lg-8 col-12 d-flex flex-column justify-content-between mx-auto">
-          <ul class="text list-unstyled d-flex flex-column justify-content-between h-75 list-icon">
-            <li>地理位置進高雄各司法機關及市中心</li>
-            <li>樓層經重新裝修</li>
-            <li>事務所助理協助代收信、接聽電話</li>
-            <li>提供辦公設備及耗材</li>
+        <div class="col-lg-8 col-12 d-flex flex-column justify-content-between">
+          <ul
+            class="text list-unstyled d-flex flex-column justify-content-between h-75 list-icon align-self-center align-self-lg-start"
+          >
+            <li class="mb-3">地理位置進高雄各司法機關及市中心</li>
+            <li class="mb-3">樓層經重新裝修</li>
+            <li class="mb-3">事務所助理協助代收信、接聽電話</li>
+            <li class="mb-3">提供辦公設備及耗材</li>
           </ul>
-          <router-link class="btn-action btn-light fs-6 ms-auto" to="/joint">more</router-link>
+          <router-link class="btn-action btn-light fs-6 btn-align" to="/joint">more</router-link>
         </div>
       </div>
     </div>
@@ -74,7 +76,7 @@
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 import { ref } from 'vue'
-import teamData from '@/data/team.json'
+import teamData from '@/assets/data/team.json'
 const internalList = ref(teamData[0])
 const jointList = ref(teamData[1])
 import teamSwiper from '@/components/TeamSwiper.vue'

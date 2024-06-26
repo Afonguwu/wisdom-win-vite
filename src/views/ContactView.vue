@@ -12,23 +12,23 @@
       <ul class="list-unstyled bg-danger-subtle p-6 rounded-3 text-primary">
         <li class="mb-5 border-bottom border-success">
           <h4 class="fw-bold mb-2">服務電話</h4>
-          <p class="text-info">07-2415758</p>
+          <p class="text-info fs-5">07-2415758</p>
         </li>
         <li class="mb-5 border-bottom border-success">
           <h4 class="fw-bold mb-2">傳真</h4>
-          <p class="text-info">07-2410717</p>
+          <p class="text-info fs-5">07-2410717</p>
         </li>
         <li class="mb-5 border-bottom border-success">
           <h4 class="fw-bold mb-2">電子信箱</h4>
-          <p class="text-info">wisdom988@gmail.com</p>
+          <p class="text-info fs-5">wisdom988@gmail.com</p>
         </li>
         <li class="mb-5 border-bottom border-success">
           <h4 class="fw-bold mb-2">服務時段</h4>
-          <p class="text-info">週一至週五 09：00 - 17：30</p>
+          <p class="text-info fs-5">週一至週五 09：00 - 17：30</p>
         </li>
         <li>
           <h4 class="fw-bold mb-2">服務據點</h4>
-          <p class="text-info">高雄市前金區中正四路151號13樓</p>
+          <p class="text-info fs-5">高雄市前金區中正四路151號13樓</p>
           <iframe
             style="border: 0; max-width: 100%"
             load="lazy"

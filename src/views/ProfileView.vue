@@ -61,62 +61,66 @@
       <!-- lawyer profile -->
       <div class="col-12 col-lg-7 border border-info-subtle mx-auto">
         <!-- name card -->
-        <div class="row p-4">
-          <div class="col-12 col-lg-3 p-1 text-center text-lg-start">
-            <img class="img-fluid" :src="selectedItem.imageURL" alt="" style="max-height: 400px" />
+        <div class="row p-4 mb-6 border-bottom border-secondary">
+          <div class="col-12 p-1 text-center">
+            <img class="img-fluid" :src="selectedItem.imageURL" alt="" style="max-height: 250px" />
           </div>
-          <div class="col-12 col-lg-6 m-auto text-center text-lg-start">
+          <div class="col-12 m-auto text-center">
             <span class="d-block fs-4 mb-2 text-nowrap text-info">{{ selectedItem.title }}</span>
             <h3 class="text-nowrap fw-bold fs-2">{{ selectedItem.name }}</h3>
           </div>
         </div>
         <!-- profile content -->
-        <!-- certificate -->
-        <div class="row mb-6 contain-div-p">
-          <div class="col-12 col-sm-3 mb-4">
-            <h4 class="text-primary fw-bold d-flex align-items-center">
-              <span class="material-symbols-outlined">badge</span>
-              證照
-            </h4>
+        <div class="contain-div-p px-6">
+          <!-- certificate -->
+          <div class="row mb-6">
+            <div class="col-12 col-md-3 mb-4">
+              <h4 class="text-primary fw-bold d-flex align-items-center">
+                <span class="material-symbols-outlined">badge</span>
+                證照
+              </h4>
+            </div>
+            <div class="clo-12 col-md-8 lh-sm fs-5">
+              <p class="" v-for="item in selectedItem.certificate" v-bind:key="item">
+                {{ item }}
+              </p>
+            </div>
           </div>
-          <div class="col-12 col-sm-8 lh-sm fs-5">
-            <p v-for="item in selectedItem.certificate" v-bind:key="item">{{ item }}</p>
+          <!-- experience -->
+          <div class="row mb-6">
+            <div class="col-12 col-md-3 mb-4">
+              <h4 class="text-primary fw-bold d-flex align-items-center">
+                <span class="material-symbols-outlined">school</span>
+                學經歷
+              </h4>
+            </div>
+            <div class="clo-12 col-md-8 fs-5 lh-sm">
+              <p v-for="item in selectedItem.experience" v-bind:key="item">{{ item }}</p>
+            </div>
           </div>
-        </div>
-        <!-- experience -->
-        <div class="row mb-6">
-          <div class="col-12 col-md-3 mb-4">
-            <h4 class="text-primary fw-bold d-flex align-items-center">
-              <span class="material-symbols-outlined">school</span>
-              學經歷
-            </h4>
+          <!-- area -->
+          <div class="row mb-6">
+            <div class="col-12 col-md-3 mb-4">
+              <h4 class="text-primary fw-bold d-flex align-items-center text-nowrap">
+                <span class="material-symbols-outlined">pin_drop</span>
+                服務地區
+              </h4>
+            </div>
+            <div class="clo-12 col-md-8 fs-5 lh-sm">
+              <p v-for="item in selectedItem.area" v-bind:key="item">{{ item }}</p>
+            </div>
           </div>
-          <div class="clo-12 col-md-8 fs-5 lh-sm">
-            <p v-for="item in selectedItem.experience" v-bind:key="item">{{ item }}</p>
-          </div>
-        </div>
-        <!-- area -->
-        <div class="row mb-6">
-          <div class="col-12 col-md-3 mb-4">
-            <h4 class="text-primary fw-bold d-flex align-items-center text-nowrap">
-              <span class="material-symbols-outlined">pin_drop</span>
-              服務地區
-            </h4>
-          </div>
-          <div class="clo-12 col-md-8 fs-5 lh-sm">
-            <p v-for="item in selectedItem.area" v-bind:key="item">{{ item }}</p>
-          </div>
-        </div>
-        <!-- category -->
-        <div class="row mb-6">
-          <div class="col-12 col-md-3 mb-4">
-            <h4 class="text-primary fw-bold d-flex align-items-center text-nowrap">
-              <span class="material-symbols-outlined">trip</span>
-              業務類別
-            </h4>
-          </div>
-          <div class="clo-12 col-md-8 fs-5">
-            <div id="chart" ref="chart"></div>
+          <!-- category -->
+          <div class="row mb-6">
+            <div class="col-12 col-md-3 mb-4">
+              <h4 class="text-primary fw-bold d-flex align-items-center text-nowrap">
+                <span class="material-symbols-outlined">trip</span>
+                業務類別
+              </h4>
+            </div>
+            <div class="clo-12 col-md-8 fs-5">
+              <div id="chart" ref="chart"></div>
+            </div>
           </div>
         </div>
       </div>
@@ -128,8 +132,8 @@
 import { useRouter, useRoute } from 'vue-router'
 import { onMounted, ref, watchEffect } from 'vue'
 import Collapse from 'bootstrap/js/dist/collapse'
-import teamData from '@/data/team.json'
-import { selectItem, selectedItem, initChart } from '@/util/profileFn.js'
+import teamData from '@/assets/data/team.json'
+import c3 from 'c3'
 
 const router = useRouter()
 const route = useRoute()
@@ -149,6 +153,7 @@ const toggleSideCollapse1 = () => {
     iconValue1.value = !iconValue1.value
   }
 }
+
 const collapse2 = ref(null)
 let sideCollapse2 = null
 const toggleSideCollapse2 = () => {
@@ -157,32 +162,92 @@ const toggleSideCollapse2 = () => {
     iconValue2.value = !iconValue2.value
   }
 }
+//add collapse
 onMounted(() => {
   sideCollapse1 = new Collapse(collapse1.value, { toggle: false })
   sideCollapse2 = new Collapse(collapse2.value, { toggle: false })
 })
 
-//渲染函式
+// c3 chart
+const initChart = (category) => {
+  const ary = category
+  c3.generate({
+    data: {
+      // iris data from R
+      columns: ary,
+      type: 'pie',
+      labels: true,
+      colors: {
+        民事訴訟: 'burlywood',
+        刑事辯護: 'lightblue',
+        法律扶助: 'lightcoral',
+        不動產法律服務: 'cornflowerblue',
+        公司法律事務: 'darkcyan',
+        繼承規劃: 'darksalmon',
+        data4: 'indianred',
+        data5: 'lightgreen'
+      },
+      names: {
+        形式辯護: '形式辯護',
+        民事訴訟: '民事訴訟',
+        法律扶助: '法律扶助'
+      }
+    },
+    tooltip: {
+      show: false
+    }
+  })
+}
+
+// select variable
+let selectedItem = null
+
+// select function
+const selectItem = (name, cat) => {
+  const category = teamData.find((item) => item.name === cat)
+  if (category) {
+    const item = category.lawyers.find((item) => item.name === name)
+    if (item) {
+      selectedItem = item
+    }
+  }
+}
+
+//init function
 const init = (item, cat) => {
   router.push({
     params: { name: item, cat: cat }
   })
   selectItem(item, cat)
 }
-//變更路由變數 (sidebar v-on)
+//change route params (sidebar v-on)
 const change = (item, cat) => {
   router.push({
     params: { name: item, cat: cat }
   })
+  // close collapse
+  if (sideCollapse1._isShown && sideCollapse2._isShown) {
+    sideCollapse1.hide()
+    sideCollapse2.hide()
+    iconValue1.value = false
+    iconValue2.value = false
+  }
 }
-//監聽路由參數
+//event listen
 watchEffect(() => {
   init(route.params.name, route.params.cat)
   initChart(selectedItem.category)
 })
-//初始渲染
+//first init
 onMounted(() => {
   init(route.params.name, route.params.cat)
   initChart(selectedItem.category)
 })
 </script>
+<style>
+.c3-legend-item {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1rem;
+}
+</style>

@@ -15,7 +15,7 @@
   </div>
 </template>
 <script>
-import serveData from '@/data/serve.json'
+import serveData from '@/assets/data/serve.json'
 
 export default {
   props: {
