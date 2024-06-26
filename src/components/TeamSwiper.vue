@@ -2,24 +2,33 @@
   <swiper
     ref="{swiperRef}"
     :slidesPerView="1"
-    :centeredSlides="true"
-    :spaceEvenly="10"
-    :pagination="{
-      clickable: true,
-      hideOnClick: true
+    :autoplay="{
+      delay: 3000,
+      disableOnInteraction: false
     }"
-    :breakpoints="{
-      375: {
-        slidesPerView: 2
-      },
-      576: {
-        slidesPerView: 3
-      },
-      992: {
-        slidesPerView: 4
-      }
+    :spaceBetween="10"
+    :pagination="{
+      clickable: true
     }"
     :navigation="true"
+    :breakpoints="{
+      '400': {
+        slidesPerView: 2,
+        spaceBetween: 10
+      },
+      '620': {
+        slidesPerView: 3,
+        spaceBetween: 30
+      },
+      '880': {
+        slidesPerView: 4,
+        spaceBetween: 40
+      },
+      '1200': {
+        slidesPerView: 5,
+        spaceBetween: 50
+      }
+    }"
     :modules="modules"
     class="mySwiper"
   >
@@ -30,7 +39,7 @@
           <p class="card-text d-block fs-5 mb-2 text-nowrap text-info">{{ item.title }}</p>
           <h3 class="card-title">
             <a
-              class="stretched-link text-decoration-none text-nowrap fw-bold"
+              class="stretched-link text-decoration-none text-nowrap fw-bold text-center"
               v-on:click="gotoProfile(item.name, data.name)"
               type="button"
             >
@@ -55,7 +64,7 @@ import 'swiper/css/pagination'
 import 'swiper/css/navigation'
 
 // import required modules
-import { Pagination, Navigation } from 'swiper/modules'
+import { Autoplay, Pagination, Navigation } from 'swiper/modules'
 
 export default {
   components: {
@@ -76,7 +85,7 @@ export default {
       router.push({ name: 'profile', params: { cat: cat, name: name } })
     }
     return {
-      modules: [Pagination, Navigation],
+      modules: [Autoplay, Pagination, Navigation],
       gotoProfile
     }
   }
