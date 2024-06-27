@@ -32,13 +32,12 @@
   }
 }
 .btn-dark {
-  color: $secondary;
+  color: white;
   background: $primary;
   border: 1px solid $secondary;
   border-radius: 12px;
   &:hover {
     background: $warning;
-    color: $secondary;
     border: 1px solid $secondary;
   }
 }

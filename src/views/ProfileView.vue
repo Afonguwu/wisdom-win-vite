@@ -14,11 +14,7 @@
           >
             {{ internalList.name }}
           </button>
-          <ul
-            class="collapse list-unstyled text-center fs-5"
-            id="collapseLocalLawyer"
-            ref="collapse1"
-          >
+          <ul class="collapse list-unstyled text-center fs-5" id="collapseLocalLawyer" ref="collapse1">
             <li class="py-2 list-hover" v-for="item in internalList.lawyers" v-bind:key="item.name">
               <button
                 type="button"
@@ -41,11 +37,7 @@
           >
             {{ jointList.name }}
           </button>
-          <ul
-            class="collapse list-unstyled text-center fs-5"
-            id="collapseJointLawyer"
-            ref="collapse2"
-          >
+          <ul class="collapse list-unstyled text-center fs-5" id="collapseJointLawyer" ref="collapse2">
             <li class="py-2 list-hover" v-for="item in jointList.lawyers" v-bind:key="item.name">
               <button
                 type="button"
@@ -71,7 +63,7 @@
           </div>
         </div>
         <!-- profile content -->
-        <div class="contain-div-p px-6">
+        <div class="px-6">
           <!-- certificate -->
           <div class="row mb-6">
             <div class="col-12 col-md-3 mb-4">
@@ -132,7 +124,7 @@
 import { useRouter, useRoute } from 'vue-router'
 import { onMounted, ref, watchEffect } from 'vue'
 import Collapse from 'bootstrap/js/dist/collapse'
-import teamData from '@/assets/data/team.json'
+import teamData from '@/data/team.json'
 import c3 from 'c3'
 
 const router = useRouter()

@@ -1,9 +1,5 @@
 <template>
-  <header
-    class="navbar navbar-expand-lg fixed-top bg-primary"
-    :class="{ opaque: scrollPosition }"
-    data-bs-theme="dark"
-  >
+  <header class="navbar navbar-expand-lg fixed-top bg-primary" :class="{ opaque: scrollPosition }" data-bs-theme="dark">
     <nav class="container-xxl">
       <router-link class="navbar-brand overflow-hidden" to="/">
         <h1>智勝法律事務所</h1>
@@ -30,40 +26,16 @@
             </router-link>
           </li>
           <li class="nav-item text-center">
-            <router-link
-              class="nav-link text-nowrap text-light"
-              to="/serve"
-              v-on:click="closeCollapse"
-            >
-              服務項目
-            </router-link>
+            <router-link class="nav-link text-nowrap text-light" to="/serve" v-on:click="closeCollapse"> 服務項目 </router-link>
           </li>
           <li class="nav-item text-center">
-            <router-link
-              class="nav-link text-nowrap text-light"
-              to="/team"
-              v-on:click="closeCollapse"
-            >
-              律師團隊
-            </router-link>
+            <router-link class="nav-link text-nowrap text-light" to="/team" v-on:click="closeCollapse"> 律師團隊 </router-link>
           </li>
           <li class="nav-item text-center">
-            <router-link
-              class="nav-link text-nowrap text-light"
-              to="/contact"
-              v-on:click="closeCollapse"
-            >
-              聯絡我們
-            </router-link>
+            <router-link class="nav-link text-nowrap text-light" to="/contact" v-on:click="closeCollapse"> 聯絡我們 </router-link>
           </li>
           <li class="nav-item text-center">
-            <router-link
-              class="nav-link text-nowrap text-light"
-              to="/joint"
-              v-on:click="closeCollapse"
-            >
-              合署資訊
-            </router-link>
+            <router-link class="nav-link text-nowrap text-light" to="/joint" v-on:click="closeCollapse"> 合署資訊 </router-link>
           </li>
         </ul>
       </div>

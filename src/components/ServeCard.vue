@@ -1,6 +1,6 @@
 <template>
   <div class="col-6 col-lg-4" v-for="item in serveData" v-bind:key="item.name">
-    <div class="bg-danger bg-opacity-50 p-3 text-center border border-info-subtle rounded">
+    <div class="bg-danger bg-opacity-50 p-3 text-center border border-warning-subtle rounded">
       <img
         v-bind:src="item.imageURL"
         v-bind:alt="item.name"
@@ -15,7 +15,7 @@
   </div>
 </template>
 <script>
-import serveData from '@/assets/data/serve.json'
+import serveData from '@/data/serve.json'
 
 export default {
   props: {

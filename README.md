@@ -1,6 +1,7 @@
 ## 線框圖
 
 大略參考，後續樣式依視覺效果調整
+
 [Figma](https://www.figma.com/design/jNo9nM3la2jdmfpnADMliW/%E4%BA%8B%E5%8B%99%E6%89%80?node-id=0-1&t=8voMP1s6TcQhoMS2-1)
 
 ## 畫面
@@ -98,7 +99,7 @@ http://localhost:5173/wisdom-win-vite/
 - 為了允許部署到 GitHub Pages，需要設置`GITHUB_TOKEN`的權限：
 - 允許一個並發的部署，避免多個部署過程同時進行
 
-###推送到main
+### 推送到main分支
 
 推送可執行sh，有使用git-cz需要選擇commit 類別及輸入訊息，其餘項目可按enter
 
@@ -108,7 +109,7 @@ sh dev.sh
 
 若要推送到其他分支可參照`dev.sh`修改指令
 
-###部屬
+### 部屬到gh-page
 
 部屬可執行sh，若有需要先更改commit訊息(預設為「deploy」)
 

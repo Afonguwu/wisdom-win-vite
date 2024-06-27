@@ -33,7 +33,7 @@
     class="mySwiper"
   >
     <swiper-slide v-for="item in data.lawyers" v-bind:key="item.name">
-      <div class="card p-4">
+      <div class="card p-4 mb-8">
         <img class="top-img" v-bind:src="item.imageURL" v-bind:alt="item.name" />
         <div class="card-body">
           <p class="card-text d-block fs-5 mb-2 text-nowrap text-info">{{ item.title }}</p>
@@ -100,8 +100,6 @@ export default {
 }
 .swiper-slide {
   text-align: center;
-  font-size: 18px;
-  background: #fff;
 
   /* Center slide text vertically */
   display: flex;
@@ -114,6 +112,11 @@ export default {
   height: 150px;
   width: 100%;
   object-fit: scale-down;
+}
+
+.swiper-pagination-bullet {
+  width: 0.8rem;
+  height: 0.8rem;
 }
 .swiper-button-prev:after,
 .swiper-button-next:after {
