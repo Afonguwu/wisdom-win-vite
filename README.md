@@ -133,12 +133,6 @@ sh dev.sh
 
 ### 部屬到gh-page
 
-部屬可執行sh，若有需要先更改commit訊息(預設為「deploy」)
-
-```bash
-sh deploy.sh
-```
-
 > 下列為觸發工作方式:
 
 - 推送到 main 分支時觸發
