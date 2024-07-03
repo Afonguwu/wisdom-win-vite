@@ -45,8 +45,8 @@
       <p class="text text-info text-center">提供合屬律師明亮乾淨的辦公室</p>
       <div class="row">
         <div class="col-lg-6 col-12 text-center mb-4 mx-auto mb-lg-0 row">
-          <img src="/img/06.jpg" class="col-6 col-md-7" style="max-height: 350px" alt="出租辦公室" />
-          <img src="/img/08.jpg" class="col-6 col-md-5" style="max-height: 350px" alt="大樓外觀" />
+          <img src="/img/rental-office.jpg" class="col-6 col-md-7" style="max-height: 350px" alt="出租辦公室" />
+          <img src="/img/outward.jpg" class="col-6 col-md-5" style="max-height: 350px" alt="大樓外觀" />
         </div>
         <div class="col-lg-6 col-12 d-flex flex-column justify-content-between">
           <ul

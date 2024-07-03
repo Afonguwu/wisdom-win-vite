@@ -1,6 +1,6 @@
 <template>
   <div class="container-xxl">
-    <bannerTitle style="background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('img/team.jpg')">
+    <bannerTitle style="background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('img/team-banner.jpg')">
       律師團隊
     </bannerTitle>
     <div class="content-div-p">

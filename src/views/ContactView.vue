@@ -1,6 +1,6 @@
 <template>
   <div class="container-xxl">
-    <bannerTitle style="background-image: url('img/contact.jpg'), linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3))">
+    <bannerTitle style="background-image: url('img/contact-banner.jpg'), linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3))">
       聯絡我們
     </bannerTitle>
     <div class="content-div-p">

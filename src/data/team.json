@@ -6,14 +6,10 @@
       {
         "id": 101,
         "name": "謝曉明律師",
-        "imageURL": "img/lawyers/lawyer01.jpg",
+        "imageURL": "img/lawyers/01.jpg",
         "title": "所長",
         "certificate": ["律師執照", "不動產經紀人執照", "地政士執照"],
-        "experience": [
-          "智勝法律事務所所長",
-          "高雄大學法律研究所碩專班",
-          " 高雄市立空中大學法政學系"
-        ],
+        "experience": ["智勝法律事務所所長", "高雄大學法律研究所碩專班", " 高雄市立空中大學法政學系"],
         "area": ["全台灣(南部為主)"],
         "category": [
           ["民事訴訟", 30],
@@ -25,14 +21,10 @@
       {
         "id": 102,
         "name": "謝小花律師",
-        "imageURL": "img/lawyers/lawyer02.jpg",
+        "imageURL": "img/lawyers/02.jpg",
         "title": "主持律師",
         "certificate": ["律師執照", "不動產經紀人執照", "地政士執照"],
-        "experience": [
-          "智勝法律事務所所長",
-          "高雄大學法律研究所碩專班",
-          "高雄市立空中大學法政學系"
-        ],
+        "experience": ["智勝法律事務所所長", "高雄大學法律研究所碩專班", "高雄市立空中大學法政學系"],
         "area": ["全台灣(南部為主)"],
         "category": [
           ["不動產法律服務", 70],
@@ -43,14 +35,10 @@
       {
         "id": 103,
         "name": "謝小羊律師",
-        "imageURL": "img/lawyers/lawyer03.jpg",
+        "imageURL": "img/lawyers/03.jpg",
         "title": "主持律師",
         "certificate": ["律師執照", "不動產經紀人執照", "地政士執照"],
-        "experience": [
-          "智勝法律事務所所長",
-          "高雄大學法律研究所碩專班",
-          "高雄市立空中大學法政學系"
-        ],
+        "experience": ["智勝法律事務所所長", "高雄大學法律研究所碩專班", "高雄市立空中大學法政學系"],
         "area": ["高雄、台南"],
         "category": [
           ["繼承規劃", 30],
@@ -62,14 +50,10 @@
       {
         "id": 104,
         "name": "黃彥文律師",
-        "imageURL": "img/lawyers/lawyer04.jpg",
+        "imageURL": "img/lawyers/04.jpg",
         "title": "主持律師",
         "certificate": ["律師執照", "不動產經紀人執照", "地政士執照"],
-        "experience": [
-          "智勝法律事務所所長",
-          "高雄大學法律研究所碩專班",
-          "高雄市立空中大學法政學系"
-        ],
+        "experience": ["智勝法律事務所所長", "高雄大學法律研究所碩專班", "高雄市立空中大學法政學系"],
         "area": ["高雄、台南"],
         "category": [
           ["繼承規劃", 30],
@@ -87,14 +71,10 @@
       {
         "id": 201,
         "name": "黃曉芳律師",
-        "imageURL": "img/lawyers/lawyer05.jpg",
+        "imageURL": "img/lawyers/05.jpg",
         "title": "合署律師",
         "certificate": ["律師執照", "不動產經紀人執照", "地政士執照"],
-        "experience": [
-          "智勝法律事務所合署律師",
-          "高雄大學法律研究所碩專班",
-          "高雄市立空中大學法政學系"
-        ],
+        "experience": ["智勝法律事務所合署律師", "高雄大學法律研究所碩專班", "高雄市立空中大學法政學系"],
         "area": ["台中、嘉義"],
         "category": [
           ["刑事辯護", 30],
@@ -106,14 +86,10 @@
       {
         "id": 202,
         "name": "張志宏律師",
-        "imageURL": "img/lawyers/lawyer06.jpg",
+        "imageURL": "img/lawyers/06.jpg",
         "title": "合署律師",
         "certificate": ["律師執照", "不動產經紀人執照", "地政士執照"],
-        "experience": [
-          "智勝法律事務所所長",
-          "高雄大學法律研究所碩專班",
-          "高雄市立空中大學法政學系"
-        ],
+        "experience": ["智勝法律事務所所長", "高雄大學法律研究所碩專班", "高雄市立空中大學法政學系"],
         "area": ["全台灣(南部為主)"],
         "category": [
           ["不動產法律服務", 10],
@@ -125,14 +101,10 @@
       {
         "id": 203,
         "name": "葉小愛律師",
-        "imageURL": "img/lawyers/lawyer07.jpg",
+        "imageURL": "img/lawyers/07.jpg",
         "title": "合署律師",
         "certificate": ["律師執照", "不動產經紀人執照", "地政士執照"],
-        "experience": [
-          "智勝法律事務所所長",
-          "高雄大學法律研究所碩專班",
-          "高雄市立空中大學法政學系"
-        ],
+        "experience": ["智勝法律事務所所長", "高雄大學法律研究所碩專班", "高雄市立空中大學法政學系"],
         "area": ["全台灣(南部為主)"],
         "category": [
           ["民事訴訟", 30],
@@ -144,14 +116,10 @@
       {
         "id": 204,
         "name": "王文滔律師",
-        "imageURL": "img/lawyers/lawyer08.jpg",
+        "imageURL": "img/lawyers/08.jpg",
         "title": "合署律師",
         "certificate": ["律師執照", "不動產經紀人執照", "地政士執照"],
-        "experience": [
-          "智勝法律事務所所長",
-          "高雄大學法律研究所碩專班",
-          "高雄市立空中大學法政學系"
-        ],
+        "experience": ["智勝法律事務所所長", "高雄大學法律研究所碩專班", "高雄市立空中大學法政學系"],
         "area": ["全台灣(南部為主)"],
         "category": [
           ["民事訴訟", 30],
@@ -163,14 +131,10 @@
       {
         "id": 205,
         "name": "簡曉萱律師",
-        "imageURL": "img/lawyers/lawyer09.jpg",
+        "imageURL": "img/lawyers/09.jpg",
         "title": "合署律師",
         "certificate": ["律師執照", "不動產經紀人執照", "地政士執照"],
-        "experience": [
-          "智勝法律事務所所長",
-          "高雄大學法律研究所碩專班",
-          "高雄市立空中大學法政學系"
-        ],
+        "experience": ["智勝法律事務所所長", "高雄大學法律研究所碩專班", "高雄市立空中大學法政學系"],
         "area": ["全台灣(南部為主)"],
         "category": [
           ["民事訴訟", 30],
@@ -182,14 +146,10 @@
       {
         "id": 206,
         "name": "顏恩律師",
-        "imageURL": "img/lawyers/lawyer10.jpg",
+        "imageURL": "img/lawyers/10.jpg",
         "title": "合署律師",
         "certificate": ["律師執照", "不動產經紀人執照", "地政士執照"],
-        "experience": [
-          "智勝法律事務所所長",
-          "高雄大學法律研究所碩專班",
-          "高雄市立空中大學法政學系"
-        ],
+        "experience": ["智勝法律事務所所長", "高雄大學法律研究所碩專班", "高雄市立空中大學法政學系"],
         "area": ["全台灣(南部為主)"],
         "category": [
           ["民事訴訟", 30],
@@ -201,14 +161,10 @@
       {
         "id": 207,
         "name": "張慧婷律師",
-        "imageURL": "img/lawyers/lawyer11.jpg",
+        "imageURL": "img/lawyers/11.jpg",
         "title": "合署律師",
         "certificate": ["律師執照", "不動產經紀人執照", "地政士執照"],
-        "experience": [
-          "智勝法律事務所所長",
-          "高雄大學法律研究所碩專班",
-          "高雄市立空中大學法政學系"
-        ],
+        "experience": ["智勝法律事務所所長", "高雄大學法律研究所碩專班", "高雄市立空中大學法政學系"],
         "area": ["全台灣(南部為主)"],
         "category": [
           ["民事訴訟", 30],
@@ -220,14 +176,10 @@
       {
         "id": 208,
         "name": "吳雅婷律師",
-        "imageURL": "img/lawyers/lawyer12.jpg",
+        "imageURL": "img/lawyers/12.jpg",
         "title": "合署律師",
         "certificate": ["律師執照", "不動產經紀人執照", "地政士執照"],
-        "experience": [
-          "智勝法律事務所所長",
-          "高雄大學法律研究所碩專班",
-          "高雄市立空中大學法政學系"
-        ],
+        "experience": ["智勝法律事務所所長", "高雄大學法律研究所碩專班", "高雄市立空中大學法政學系"],
         "area": ["全台灣(南部為主)"],
         "category": [
           ["民事訴訟", 30],

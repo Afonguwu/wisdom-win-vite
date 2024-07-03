@@ -1,6 +1,6 @@
 <template>
   <div class="container-xxl">
-    <bannerTitle style="background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('img/serve.jpg')">
+    <bannerTitle style="background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('img/serve-banner.jpg')">
       服務項目
     </bannerTitle>
     <div class="content-div-p">

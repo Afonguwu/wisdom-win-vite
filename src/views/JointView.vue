@@ -1,6 +1,6 @@
 <template>
   <div class="container-xxl">
-    <bannerTitle style="background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('img/joint.jpg')">
+    <bannerTitle style="background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('img/joint-banner.jpg')">
       合署資訊
     </bannerTitle>
     <div class="content-div-p">
@@ -50,35 +50,35 @@ import { ref } from 'vue'
 import VueEasyLightbox from 'vue-easy-lightbox'
 const images = [
   {
-    src: 'img/01.jpg',
+    src: 'img/banner.jpg',
     alt: '櫃台環境照'
   },
   {
-    src: 'img/02.jpg',
+    src: 'img/gate.jpg',
     alt: '門口環境照'
   },
   {
-    src: 'img/03.jpg',
+    src: 'img/sofa.jpg',
     alt: '沙發區環境照'
   },
   {
-    src: 'img/04.jpg',
+    src: 'img/meeting-room.jpg',
     alt: '會議室環境照'
   },
   {
-    src: 'img/05.jpg',
+    src: 'img/rental-environment.jpg',
     alt: '出租環境照'
   },
   {
-    src: 'img/06.jpg',
+    src: 'img/rental-office.jpg',
     alt: '出租辦公室'
   },
   {
-    src: 'img/07.jpg',
+    src: 'img/desk.jpg',
     alt: '大辦公桌'
   },
   {
-    src: 'img/08.jpg',
+    src: 'img/outward.jpg',
     alt: '大樓外觀'
   }
 ]
