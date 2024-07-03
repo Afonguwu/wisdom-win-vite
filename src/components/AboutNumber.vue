@@ -2,7 +2,7 @@
   <div>
     <div class="row g-3">
       <div class="col-12 col-sm-4">
-        <div class="card text-center py-4 border-warning-subtle fw-bold" ref="animate1">
+        <div class="card text-center py-4 border-warning-subtle fw-bold" ref="yearDOM">
           <p class="text-info fs-1 fw-bold mb-0 number">{{ `${yearValue}年 ` }}</p>
           <p class="text-info-emphasis mb-0 fs-5 d-flex align-items-center justify-content-center">
             <span class="material-symbols-outlined pe-1">flag</span>運營時間
@@ -10,7 +10,7 @@
         </div>
       </div>
       <div class="col-12 col-sm-4">
-        <div class="card text-center py-4 border-warning-subtle fw-bold" ref="animate2">
+        <div class="card text-center py-4 border-warning-subtle fw-bold" ref="caseDOM">
           <p class="text-info fs-1 fw-bold mb-0 number">{{ `${caseNum}+` }}</p>
           <p class="text-info-emphasis mb-0 fs-5 d-flex align-items-center justify-content-center">
             <span class="material-symbols-outlined pe-1">library_books</span>總案件數
@@ -18,8 +18,8 @@
         </div>
       </div>
       <div class="col-12 col-sm-4">
-        <div class="card text-center py-4 border-warning-subtle fw-bold" ref="animate3">
-          <p class="text-info fs-1 fw-bold mb-0 number">{{ `${cusNum}+` }}</p>
+        <div class="card text-center py-4 border-warning-subtle fw-bold" ref="customerDOM">
+          <p class="text-info fs-1 fw-bold mb-0 number">{{ `${customerNum}+` }}</p>
           <p class="text-info-emphasis mb-0 fs-5 d-flex align-items-center justify-content-center">
             <span class="material-symbols-outlined pe-1">groups_3</span>總客戶數
           </p>
@@ -32,76 +32,68 @@
 <script setup>
 import { onUnmounted, onMounted, ref } from 'vue'
 
-//animate speed
-const duration = 1500
+// ref
+const yearDOM = ref(null)
+const caseDOM = ref(null)
+const customerDOM = ref(null)
 
-//year
-const animate1 = ref(null)
+// variable
 const currentYear = new Date().getFullYear()
-const startYear = 2011
-const totalYear = currentYear - startYear
+const START_YEAR = 2011
+const totalYear = currentYear - START_YEAR
 const yearValue = ref(0)
-const animateYear = () => {
-  const startTime = performance.now()
-  const updateNumber = (currentTime) => {
-    const elapsedTime = currentTime - startTime
-    const progress = Math.min(elapsedTime / duration, 1)
-    yearValue.value = Math.round(progress * totalYear)
 
-    if (progress < 1) {
-      requestAnimationFrame(updateNumber)
-    }
-  }
-  requestAnimationFrame(updateNumber)
-}
-//case
-const animate2 = ref(null)
+const customerNum = ref(3000)
+
 const caseNum = ref(7000)
-const animateCase = () => {
+
+// animate function
+const DURATION = 1500
+const animate = (initialValue, targetValue, getValue, setValue) => {
   const startTime = performance.now()
-  const initialCaseNum = caseNum.value
+
   const updateNumber = (currentTime) => {
     const elapsedTime = currentTime - startTime
-    const progress = Math.min(elapsedTime / duration, 1)
-    caseNum.value = Math.round(progress * initialCaseNum)
+    const progress = Math.min(elapsedTime / DURATION, 1)
+    const currentValue = initialValue + progress * (targetValue - initialValue)
+    setValue(Math.round(currentValue))
 
     if (progress < 1) {
       requestAnimationFrame(updateNumber)
     }
   }
+
   requestAnimationFrame(updateNumber)
 }
 
-//customer
-const animate3 = ref(null)
-const cusNum = ref(3000)
-const animateCus = () => {
-  const startTime = performance.now()
-  const initialCusNum = cusNum.value
-  const updateNumber = (currentTime) => {
-    const elapsedTime = currentTime - startTime
-    const progress = Math.min(elapsedTime / duration, 1)
-    cusNum.value = Math.round(progress * initialCusNum)
-
-    if (progress < 1) {
-      requestAnimationFrame(updateNumber)
-    }
-  }
-  requestAnimationFrame(updateNumber)
-}
 //entry block start
 const handleIntersect = (entries) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
       switch (entry.target) {
-        case animate1.value:
-          animateYear()
+        case yearDOM.value:
+          animate(
+            0,
+            totalYear,
+            () => yearValue.value,
+            (val) => (yearValue.value = val)
+          )
           break
-        case animate2.value:
-          animateCase()
+        case caseDOM.value:
+          animate(
+            0,
+            caseNum.value,
+            () => caseNum.value,
+            (val) => (caseNum.value = val)
+          )
           break
-        case animate3.value:
-          animateCus()
+        case customerDOM.value:
+          animate(
+            0,
+            customerNum.value,
+            () => customerNum.value,
+            (val) => (customerNum.value = val)
+          )
           break
         default:
           break
@@ -118,9 +110,9 @@ onMounted(() => {
     // 當 n%的元素進入視窗時觸發
     threshold: 0.1
   })
-  observer.observe(animate1.value)
-  observer.observe(animate2.value)
-  observer.observe(animate3.value)
+  observer.observe(yearDOM.value)
+  observer.observe(caseDOM.value)
+  observer.observe(customerDOM.value)
 })
 
 onUnmounted(() => {
