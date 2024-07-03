@@ -92,7 +92,7 @@ http://localhost:5173/wisdom-win-vite/
   - assets - 靜態放置處
     - scss
     - js
-    - data
+  - data - JSON資料放置處
 - public - 部屬圖片放置處
 
 ## 專案技術
