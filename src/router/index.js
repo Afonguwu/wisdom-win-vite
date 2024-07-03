@@ -1,10 +1,10 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
-import HomeView from '@/views/HomeView.vue'
-import ServeView from '@/views/ServeView.vue'
-import TeamView from '@/views/TeamView.vue'
-import ProfileView from '@/views/ProfileView.vue'
-import ContactView from '@/views/ContactView.vue'
-import JointView from '@/views/JointView.vue'
+const HomeView = () => import('@/views/HomeView.vue')
+const ServeView = () => import('@/views/ServeView.vue')
+const TeamView = () => import('@/views/TeamView.vue')
+const ProfileView = () => import('@/views/ProfileView.vue')
+const ContactView = () => import('@/views/ContactView.vue')
+const JointView = () => import('@/views/JointView.vue')
 
 const routes = [
   {
